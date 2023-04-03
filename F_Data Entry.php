@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faculty Dashboard</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="middel_button.css">
     <script src="https://kit.fontawesome.com/41c61c6dc3.js" crossorigin="anonymous"></script>   
 </head>
 <body>
@@ -16,23 +17,21 @@
         </div>
 
         <ul>
-        <li class="list active">
-            <a href="#">
+        <li class="list">
+            <a href="F_Dashboard.php">
             <span class="icon">
-                <i class="fa-solid fa-chart-pie fa-beat-fade fa-xl"></i>
+                <i class="fa-solid fa-chart-pie fa-xl"></i>
             </span>
             <span class="title">Dashboard</span>
             </a>
         </li>
         <li class="list">
-            <li class="list">
-                <a href="F_PLO_Analysis.php">
-                <span class="icon">
-                    <i class="fa-brands fa-react fa-xl"></i>
-                </span>
-                <span class="title">PLO Analysis</span>
-                </a>
-            </li>
+            <a href="#">
+            <span class="icon">
+                <i class="fa-brands fa-react fa-xl"></i>
+            </span>
+            <span class="title">PLO Analysis</span>
+            </a>
         </li>
         <li class="list">
             <a href="F_Spider_Chart_Analysis.php">
@@ -42,10 +41,10 @@
             <span class="title">Spider Chart Analysis</span>
             </a>
         </li>
-        <li class="list">
-            <a href="F_Data Entry.php">
+        <li class="list active">
+            <a href="#">
             <span class="icon">
-                <i class="fa-solid fa-bell fa-xl"></i>
+                <i class="fa-solid fa-bell fa-beat-fade fa-xl"></i>
             </span>
             <span class="title">Data Entry</span>
             </a>
@@ -70,7 +69,29 @@
         <div style="background-color: rgb(75, 192, 192); margin-right: 10px; text-align: center;">
             <h2>STUDENT PERFORMANCE MONITORING SYSTEM</h2>           
         </div>
-        <h1>Faculty Spider_Chart_Analysis</h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <!--2nd navbar-->
+        <div class="tab">
+            <button class="custom-btn btn-9 tablinks" onclick="openCity(event, 'London')">Create Course Outline </button>&nbsp;&nbsp;
+            <button class="custom-btn btn-10 tablinks" onclick="openCity(event, 'Paris')">View Course Online </button>&nbsp;&nbsp;
+            <button class="custom-btn btn-11 tablinks" onclick="openCity(event, 'Tokyo')">Submit Grate<div class="dot"></div></button>
+        </div>
+        
+        <div id="London" class="tabcontent">
+            <h3>London</h3>
+            <p>London is the capital city of England.</p>
+        </div>
+        
+        <div id="Paris" class="tabcontent">
+            <h3>Paris</h3>
+            <p>Paris is the capital of France.</p> 
+        </div>
+
+        <div id="Tokyo" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <h1>Faculty Data Entry</h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     
         Why do we use it?
         It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).

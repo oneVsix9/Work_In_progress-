@@ -4,7 +4,7 @@
 
 :root {
   --animation-speed: 1s;
-  --primary-color: #4187f6;
+  --primary-color: rgb(75, 192, 192);
   --background-color: rgb(226, 226, 226);
   --secondary-color: #ff0;
   --body-color: #fff;
@@ -13,7 +13,7 @@
 }
 
 .dark__theme {
-  --primary-color: #4187f6;
+  --primary-color: rgb(255, 99, 132,0.7);
   --background-color: #2b343b;
   --body-color: #212121;
   --text-color: #fff;
@@ -177,4 +177,7 @@ body {
   padding: 20px;
 
 }
-
+.container{
+  display: flex;
+  column-gap: 150px;
+}

@@ -16,10 +16,10 @@
         </div>
 
         <ul>
-        <li class="list active">
-            <a href="#">
+        <li class="list">
+            <a href="F_Dashboard.php">
             <span class="icon">
-                <i class="fa-solid fa-chart-pie fa-beat-fade fa-xl"></i>
+                <i class="fa-solid fa-chart-pie fa-xl"></i>
             </span>
             <span class="title">Dashboard</span>
             </a>
@@ -35,9 +35,9 @@
             </li>
         </li>
         <li class="list">
-            <a href="F_Spider_Chart_Analysis.php">
-            <span class="icon">
-                <i class="fa-solid fa-thumbtack fa-xl"></i>
+            <a href="#">
+            <span class="icon active">
+                <i class="fa-solid fa-thumbtack fa-beat-fade fa-xl"></i>
             </span>
             <span class="title">Spider Chart Analysis</span>
             </a>
@@ -67,10 +67,10 @@
     </div>
     
     <div class="content1">
-        <div style="background-color: rgb(75, 192, 192); margin-right: 10px; text-align: center;">
+        <div style="background-color: rgb(75, 192, 192,0.8); margin-right: 10px; text-align: center;">
             <h2>STUDENT PERFORMANCE MONITORING SYSTEM</h2>           
         </div>
-        <h1>Faculty Spider_Chart_Analysis</h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        <h1>Faculty Siider Chart Analysis</h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     
         Why do we use it?
         It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).

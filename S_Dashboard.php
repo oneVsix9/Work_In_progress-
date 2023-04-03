@@ -1,8 +1,19 @@
 <?php
 include 'connect.php';
+$studentID = "1910876";
 
+$sql = "SELECT plo.ploNum AS ploNum, 
+AVG((ans.markObtained/q.markPerQuestion)*100) AS percent
+FROM registration_t AS r, answer_t AS ans, question_t AS q, 
+co_t AS co, plo_t AS plo
+WHERE r.registrationID=ans.registrationID 
+AND ans.examID=q.examID
+AND ans.answerNum=q.questionNum AND q.coNum=co.coNum 
+AND q.courseID=co.courseID AND co.ploID=plo.ploID 
+AND r.studentID='$studentID'
+GROUP BY plo.ploNum,r.studentID";
 
-// $plo = mysqli_query($conn, $sql);
+$plo = mysqli_query($conn, $sql);
 // $nums=mysqli_num_rows($query);
 
 
@@ -99,15 +110,167 @@ include 'connect.php';
     </div>
 
     <div class="content1">
-        <div style="background-color: #4187f6; margin-right: 10px; text-align: center;">
+        <div style="background-color: rgb(75, 192, 192); margin-right: 10px; text-align: center;">
             <h2>STUDENT PERFORMANCE MONITORING SYSTEM</h2>
         </div>
         
+      <div class="container">
+      <div>
+        <h3>GPA PERFORMANCE </h3>
+            <canvas id="myChart" width="700" height="500"canvas>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+            const ctx = document.getElementById('myChart');
+
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Spring 2020', 'Summer 2020', 'Autumn 2020'],
+                    datasets: [{
+                            label: 'Individual GPA',
+                            data: [2.8, 3.0, 3.5],
+                            backgroundColor: [
+                                // 'rgba(153, 102, 255, 0.4)',
+                                'rgba(75, 192, 192, 0.6)',
+                                // 'rgba(255, 99, 132, 0.8)',
+                                //  'rgba(255, 159, 64, 0.6)',
+                                //  'rgba(255, 205, 86, 0.6)',
+
+                                //  'rgba(54, 162, 235, 0.6)',
+
+                                // 'rgba(201, 203, 207, 0.6)'
+                            ],
+                            borderColor: [
+                                // 'rgb(255, 99, 132)',
+                                // 'rgb(255, 159, 64)',
+                                //  'rgb(255, 205, 86)',
+                                'rgb(75, 192, 192)',
+                                // 'rgb(54, 162, 235)',
+                                // 'rgb(153, 102, 255)',
+                                // 'rgb(201, 203, 207)'
+                            ],
+                            tension: 0.2
+                        },
+                        {
+                            label: 'Department GPA',
+                            data: [2.4, 2.8, 2.9],
+                            backgroundColor: [
+                                // 'rgba(153, 102, 255, 0.4)',
+                                // 'rgba(75, 192, 192, 0.6)',
+                                'rgba(255, 99, 132, 0.8)',
+                                //  'rgba(255, 159, 64, 0.6)',
+                                //  'rgba(255, 205, 86, 0.6)',
+
+                                //  'rgba(54, 162, 235, 0.6)',
+
+                                // 'rgba(201, 203, 207, 0.6)'
+                            ],
+                            borderColor: [
+                                'rgb(255, 99, 132)',
+                                // 'rgb(255, 159, 64)',
+                                //  'rgb(255, 205, 86)',
+                                // 'rgb(75, 192, 192)',
+                                // 'rgb(54, 162, 235)',
+                                // 'rgb(153, 102, 255)',
+                                // 'rgb(201, 203, 207)'
+                            ],
+                            tension: 0.2
+                        }
+                    ]
+
+                },
+                options: {
+                    scales: {
+                        x: {
+                            display: false
+                           
+                        },
+                        y: {
+                            beginAtZero:false
+                        }
+                    }
+                }
+            });
+        </script>
+        <div>
+        <h3>PLO PERFORMANCE </h3>
+            <canvas id="myChart1" width="700" height="500" ></canvas>
+        </div>
+        <script>
+            const ctx1 = document.getElementById('myChart1').getContext('2d');
+            <?php
+            while ($data = mysqli_fetch_array($plo)) {
+
+                $plonum[] = "PLO" . $data['ploNum'];
+                $percent[] = $data['percent'];
+                $percent1[] = $data['percent']-10;
+            }
+
+            ?>
+
+            new Chart(ctx1, {
+                type: 'bar',
+                data: {
+
+
+                    labels: <?php echo json_encode($plonum) ?>,
+                    datasets: [{
+                        label: ['Individual'] ,
+                        data: <?php echo json_encode($percent) ?>,
+                        backgroundColor: [
+                            
+                            'rgba(75, 192, 192, 0.7)'
+                            
+                        ],
+                        borderColor: [
+                            
+                            'rgb(75, 192, 192)'
+                            
+                        ],
+                        borderWidth: 1
+                    },
+                    {
+                        label:['Dept Average'],
+                        data: <?php echo json_encode($percent1) ?>,
+                        backgroundColor: [
+                            
+                            'rgba(255, 99, 132, 0.8)',
+                            
+                        ],
+                        borderColor: [
+                            
+                            'rgb(255, 99, 132)',
+                            
+                        ],
+                        borderWidth: 1
+                    }
+                ]
+                },
+                options: {
+                    responsive: true,
+                    legend: {
+
+
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+      </div>
+
+
 
     </div>
 
     <script src="main.js"></script>
-    
+
 
 </body>
 

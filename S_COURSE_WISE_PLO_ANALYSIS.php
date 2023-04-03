@@ -25,11 +25,11 @@
             </a>
         </li>
         <li class="list">
-            <a href="S_CO_WISE_PLO_ANALYSIS.php">
+            <a href="OVERALL_PLO_ANALYSIS.php">
             <span class="icon">
                 <i class="fa-brands fa-react fa-xl"></i>
             </span>
-            <span class="title">CO WISE PLO ANALYSIS</span>
+            <span class="title">OVERALL PLO ANALYSIS</span>
             </a>
         </li>
         <li class="list active">
@@ -73,7 +73,7 @@
     </div>
     
     <div class="content1">
-        <div style="background-color: #4187f6; margin-right: 10px; text-align: center;">
+        <div style="background-color: rgb(75, 192, 192); margin-right: 10px; text-align: center;">
             <h2>STUDENT PERFORMANCE MONITORING SYSTEM</h2>           
         </div>
         <h1>COURSE WISE PLO ANALYSIS</h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.

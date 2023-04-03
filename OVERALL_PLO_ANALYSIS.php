@@ -110,7 +110,7 @@ $plo = mysqli_query($conn, $sql);
     </div>
 
     <div class="content1">
-        <div style="background-color: #4187f6; margin-right: 10px; text-align: center;">
+        <div style="background-color: rgb(75, 192, 192); margin-right: 10px; text-align: center;">
             <h2>STUDENT PERFORMANCE MONITORING SYSTEM</h2>
         </div>
         <H1>OVERALL PLO ANALYSIS</H1>
