@@ -14,21 +14,7 @@ AND r.studentID='$studentID'
 GROUP BY plo.ploNum,r.studentID";
 
 $plo = mysqli_query($conn, $sql);
-// $nums=mysqli_num_rows($query);
 
-
-// $sql="SELECT* from student_t";
-
-// $query = mysqli_query($conn,$sql);
-// // $nums=mysqli_num_rows($query);
-// while ($res=mysqli_fetch_assoc($query)){
-//   echo $res['studentID']."<br>";
-// }
-// // $fet=mysqli_fetch_assoc($query);
-// // echo $fet[1];
-
-
-//
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -94,7 +80,7 @@ $plo = mysqli_query($conn, $sql);
                 </a>
             </li>
             <li class="list">
-                <a href="#">
+                <a href="index.php">
                     <span class="icon">
                         <i class="fa-solid fa-person-running fa-xl"></i>
                     </span>
@@ -116,7 +102,8 @@ $plo = mysqli_query($conn, $sql);
         
       <div class="container">
       <div>
-        <h3>GPA PERFORMANCE </h3>
+        <!-- <div><a href="#"><img src="gpa.png" alt=""></a></div> -->
+        <h3 style="text-align: center">GPA PERFORMANCE </h3>
             <canvas id="myChart" width="700" height="500"canvas>
         </div>
 
@@ -196,7 +183,7 @@ $plo = mysqli_query($conn, $sql);
             });
         </script>
         <div>
-        <h3>PLO PERFORMANCE </h3>
+        <h3 style="text-align: center">PLO PERFORMANCE </h3>
             <canvas id="myChart1" width="700" height="500" ></canvas>
         </div>
         <script>

@@ -58,7 +58,7 @@
             </a>
         </li>
         <li class="list">
-            <a href="#">
+            <a href="index.php">
             <span class="icon">
                 <i class="fa-solid fa-person-running fa-xl"></i>
             </span>
